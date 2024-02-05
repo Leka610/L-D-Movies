@@ -51,32 +51,8 @@
   <div class="genres">
     <section id="action">
       <h2>2023 Action Movies</h2>
-
-      <div class="film-container">
-        <?php
-        include("db.php");
-
-        $zhanri = "action";
-
-        $sql = "SELECT `fotoID`, `emri_foto`, `rruga`, `zhanri` FROM `filmi_foto` WHERE `zhanri` = '$zhanri'";
-        $result = $conn->query($sql);
-
-
-        if ($result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-            $imageName = $row['emri_foto'];
-            $imagePath = $row['rruga'];
-            echo "<img src='$imagePath' alt='$imageName'>";
-          }
-        } else {
-          echo "<p>No photos found for the specified genre.</p>";
-        }
-
-
-        ?>
       </div>
     </section>
-
     <section id="comedy">
       <h2>2023 Comedy Movies</h2>
       <div class="film-container">
